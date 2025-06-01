@@ -17,6 +17,10 @@ function generateBook(event) {
   let prompt = `user instructions: generate a book about ${instructionsInput.value}`;
   let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
+  let bookElement = document.querySelector("#book-recommendation");
+  bookElement.classList.remove("hidden");
+  bookElement.innerHTML = "Generating your perfect book...";
+
   axios.get(apiURL).then(displayBook);
 }
 
