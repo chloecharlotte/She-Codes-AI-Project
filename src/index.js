@@ -10,7 +10,7 @@ function displayBook(response) {
 function generateBook(event) {
   event.preventDefault();
 
-  let instructionsInput = document.querySelector("#user-instructions");
+  let instructionsInput = document.querySelector(".prompt");
   let apiKey = "14e2ba01dt6565f0b8o8e18b0aa7193f";
   let context =
     "you are an intellegent AI assistant that was created to help recommend books to people based on the user instructions provided. Please only recommend one book and do no give reasoning to the recommendations.";
